@@ -2,7 +2,7 @@
 	<div class="install">
 		<div class="regist-inner">
 			<p class="regist-title">{{ $t('install.title') }}</p>
-			<input type="text" :placeholder="$t('install.date')" class="pub-input" @click="setDate" v-model="install.date">
+			<input readonly type="text" :placeholder="$t('install.date')" class="pub-input" @click="setDate" v-model="install.date">
 			<select v-model="install.size" class="pub-input select-input">
 				<option disabled value="">{{ $t('install.size')}}</option>
 				<option value="1">1 person</option>
