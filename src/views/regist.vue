@@ -2,11 +2,18 @@
 	<div class="regist">
 		<div class="regist-inner">
 			<p class="regist-title">{{ $t("regist.number") }}</p>
-			<input type="text" placeholder="ABC123456" class="pub-input" v-model="number">
+			<input type="text" :placeholder="$t('regist.holdnumber')" class="pub-input" v-model="user.number">
 			<p>{{ $t('regist.tip') }}</p>
-			<p class="regist-title">{{ $t("regist.info") }}</p>
+			<p class="regist-title">{{ $t('regist.info') }}</p>
 			<input type="text" :placeholder="$t('regist.name')" class="pub-input" v-model="user.name">
-			<input type="text" :placeholder="$t('regist.city')" class="pub-input" v-model="user.city">
+			<template>
+				<v-distpicker  hide-area
+					:province = "user.province"
+					:city     = "user.city"
+					@province = "onProvince"
+					@city     = "onCity"
+				></v-distpicker>
+			</template>
 			<input type="text" :placeholder="$t('regist.address')" class="pub-input" v-model="user.address">
 			<input type="text" :placeholder="$t('regist.postcode')" class="pub-input" v-model="user.postcode">
 			<input type="phone" :placeholder="$t('regist.mobile')" class="pub-input pub-sm-input" maxlength="13" v-model="phone">
@@ -20,7 +27,8 @@
 	</div>
 </template>
 <script>
-    import Comfilm from '@/components/comfilm'
+	import Comfilm     from '@/components/comfilm'
+	import VDistpicker from 'v-distpicker'
 
 	export default{
 		name : 'regist',
@@ -31,13 +39,14 @@
 				count  : '',
 				timer  : null,
 				phone  : '', 
-				number : '',
 				user : {
 					name     : '',
-					city     : '',
 					address  : '',
 					postcode : '',
-					code     : ''
+					code     : '',
+					number   : '',
+					province : '',
+					city     : '',
 				}
 
 			}
@@ -48,7 +57,8 @@
 			}
 		},
 		components : {
-			'v-comfilm' : Comfilm
+			'v-comfilm'    : Comfilm,
+			'v-distpicker' : VDistpicker
 		},
 		methods : {
 			getCode() {
@@ -67,16 +77,21 @@
 					},1000)
 				}
 			},
+			onProvince(obj) {
+                this.user.province = obj.value;
+            },
+            onCity(obj) {
+                this.user.city = obj.value;
+            },
 			next() {
-				if(this.user.name == '' || this.user.city == '' || this.user.address == ''){
-					this.isShow = !this.isShow
-					return
-				}
-				if(this.user.postcode == '' || this.user.code == '' || this.number == ''){
-					this.isShow = !this.isShow
-					return	
-				}
-				if(this.phone == ''){
+				if( this.user.number   == '' ||
+					this.user.name     == '' || 
+					this.user.address  == '' ||
+					this.user.province == '' ||
+				    this.user.city     == '' ||
+				    this.user.postcode == '' ||
+				    this.phone         == '' ||
+				    this.user.code     == '' ){
 					this.isShow = !this.isShow
 					return
 				}else{
@@ -89,3 +104,17 @@
 		}
 	}
 </script>
+<style>
+	select[data-v-a078dc08] {
+		padding          : 0 6px;
+		margin-bottom    : 10px;
+		border-radius    : 10px;
+		outline          : none;
+		width            : 47.85%;
+		background-color : rgb(239,239,244);
+		border           : none;
+	}
+	select[data-v-a078dc08]:first-child{
+		margin-right : 10px;
+	}
+</style>

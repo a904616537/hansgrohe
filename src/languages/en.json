@@ -5,17 +5,18 @@
 		"language" : "Switch Language："
 	},
 	"regist" : {
-		"number"   : "Serial Number",
-		"info"     : "Personal Info",
-		"tip"      : "If serial number is not automatically inserted, please refer to QR sticker label and manually enter serial number.",
-		"name"     : "FULL NAME *",
-		"city"     : "CITY *",
-		"address"  : "ADDRESS *",
-		"postcode" : "POSTAL CODE *",
-		"mobile"   : "MOBILE PHONE *",
-		"code"     : "CODE",
-		"sms"      : "GET SMS",
-		"next"     : "Next Step"
+		"number"     : "Serial Number",
+		"info"       : "Personal Info",
+		"tip"        : "If serial number is not automatically inserted, please refer to QR sticker label and manually enter serial number.",
+		"name"       : "FULL NAME *",
+		"city"       : "CITY *",
+		"address"    : "ADDRESS *",
+		"postcode"   : "POSTAL CODE *",
+		"mobile"     : "MOBILE PHONE *",
+		"code"       : "CODE",
+		"sms"        : "GET SMS",
+		"next"       : "Next Step",
+		"holdnumber" : "ABC123456 *"
 	},
 	"install" : {
 		"title"      : "Installation Info",

@@ -18,7 +18,7 @@
 		},
 		props : {
 			onClose : {
-				type : Function,
+				type    : Function,
 				default : () => console.log('onClose')
 			}
 		}

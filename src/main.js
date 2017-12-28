@@ -11,11 +11,12 @@ import vuexI18n  from 'vuex-i18n'
 import Cookie    from 'vue-cookie'
 import Logo      from '@/components/logo'
 import Language from '@/components/language'
+import Calendar from 'vue2-datepick'
 
 
 // Vue.use(Cookie)
 Vue.use(VueRouter)
-
+Vue.use(Calendar)
 
 Vue.config.productionTip = false
 Vue.component('v-logo',Logo)
