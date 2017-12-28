@@ -152,5 +152,6 @@
 		-moz-appearance    : none;
 		-webkit-appearance : none;
 		-ms-appearance     : none; 
+		color              : #2c3e50;
 	}
 </style>
