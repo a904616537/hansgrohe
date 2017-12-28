@@ -4,6 +4,11 @@
 	display : block;
 	content : '';
 }
+select{
+	appearance         : none;
+	-moz-appearance    : none;
+	-webkit-appearance : none;
+}
 .pub-title{
 	background-color : #686C72;
 	color            : #fff;
@@ -38,7 +43,7 @@
 }
 .under-line{
 	text-decoration : underline;
-	color: #333;
+	color           : #333;
 }
 .pub-input{
 	background-color : rgb(239,239,244);
