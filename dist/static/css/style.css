@@ -1,0 +1,129 @@
+.clearfloat:after{
+	clear   : both;
+	height  : 0;
+	display : block;
+	content : '';
+}
+.pub-title{
+	background-color : #686C72;
+	color            : #fff;
+	text-align       : left;
+	padding          : 0 20px;
+	font-weight      : bold;
+	line-height      : 65px;
+	font-size        : 20px;
+}
+.pub-img .img{
+	width : 100%;
+}
+.pub-btn{
+	background-color : rgb(38,167,146);
+	line-height      : 40px;
+	border-radius    : 10px;
+	font-weight      : bold;
+	color            : #fff;
+	text-decoration  : none;
+	border           : none;
+	display          : block;
+	margin           : 20px auto;
+	width            : 90%;
+	font-size        : 20px;
+	outline          : none;
+}
+.pub-btn:disabled{
+	background-color : #999;
+}
+.pub-language{
+	font-size : 14px;
+}
+.under-line{
+	text-decoration : underline;
+	color: #333;
+}
+.pub-input{
+	background-color : rgb(239,239,244);
+	border-radius    : 10px;
+	line-height      : 40px;
+	outline          : none;
+	border           : none;
+	padding          : 0 10px;
+	margin-bottom    : 10px;
+	width            : 94%;
+	height           : 40px;
+	font-size        : 14px;
+	color            : #2c3e50;
+}
+.pub-sm-input{
+	width         : 36%;
+	border-radius : 10px;
+	line-height   : 40px;
+	margin-right  : 10px;
+	color         : #2c3e50;
+}
+.pub-xs-input{
+	width        : 22%;
+	text-align   : center;
+	margin-right : 10px;
+	color        : #2c3e50;
+}
+.pub-div{
+	padding : 0 12px;
+}
+.router-link-active {
+	text-decoration : none;
+}
+
+
+/*  regist  */
+.regist-inner{
+	text-align : left;
+	padding    : 6px 20px 20px;
+	overflow   : hidden;
+	font-size  : 12px;
+}
+.regist-inner .sms{
+	background-color : rgb(38,167,146);
+	color            : #fff;
+	text-align       : center;
+	font-weight      : bold;
+	float            : right;
+	line-height      : 40px;
+	margin-right     : 0px;
+	border-radius    : 10px;
+}
+.regist-inner .sms-time{
+	background-color : #ccc;
+}
+.regist-inner .regist-title{
+	font-size   : 14px;
+	font-weight : bold;
+}
+
+
+
+/*  install  */
+.install{
+	font-size : 14px;
+}
+.install .checkbox{
+	text-align : left;
+	padding    : 0 20px;
+	font-size  : 12px;
+}
+.install .checkbox .input-checkbox{
+	margin-right : 5px;
+}
+.install .install-btn{
+	margin-bottom : 10px;
+}
+.install .pub-language{
+	margin : 10px;
+}
+
+
+/*  complete  */
+.complete-text{
+	padding    : 20px;
+	text-align : left;
+	font-size  : 14px;
+}
