@@ -142,7 +142,7 @@
 	.select-input{
 		height             : 40px;
 		width              : 100%;
-		padding            : 0 6px;
+		padding            : 0 12px;
 		margin-bottom      : 10px;
 		border-radius      : 10px;
 		outline            : none;

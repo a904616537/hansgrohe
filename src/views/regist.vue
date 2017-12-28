@@ -106,7 +106,7 @@
 </script>
 <style>
 	.regist .address select{
-		padding            : 0 6px;
+		padding            : 0 10px;
 		margin-bottom      : 10px;
 		border-radius      : 10px;
 		outline            : none;
@@ -117,6 +117,7 @@
 		-moz-appearance    : none;
 		-webkit-appearance : none;
 		-ms-appearance     : none; 
+		color              : #2c3e50;
 	}
 	.regist .address select:first-child{
 		margin-right : 10px;
