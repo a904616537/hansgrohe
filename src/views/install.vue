@@ -140,7 +140,17 @@
 		transform    : rotate(-45deg);
 	}
 	.select-input{
-		height : 40px;
-		width  : 100%;
+		height             : 40px;
+		width              : 100%;
+		padding            : 0 6px;
+		margin-bottom      : 10px;
+		border-radius      : 10px;
+		outline            : none;
+		background-color   : rgb(239,239,244);
+		border             : none;
+		appearance         : none;
+		-moz-appearance    : none;
+		-webkit-appearance : none;
+		-ms-appearance     : none; 
 	}
 </style>
