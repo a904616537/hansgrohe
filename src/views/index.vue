@@ -2,7 +2,7 @@
 	<div class="home">
 	    <div class="pub-title">{{ $t("home.title") }}</div>
 	    <div class="pub-img">
-	        <img src="/static/imgs/img.jpg" class="img" />
+	        <img src="static/imgs/img.jpg" class="img" />
 	    </div>
 	    <router-link to="/regist">
 	        <div class="pub-btn">{{ $t("home.regist") }}</div>

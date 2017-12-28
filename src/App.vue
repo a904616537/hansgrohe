@@ -29,10 +29,7 @@
 </script>
 
 <style>
-@font-face{
-    font-family : myFont;
-    src         : url('/static/fonts/Futura.ttc');
-}
+
 #app {
     font-family             : myFont;
     -webkit-font-smoothing  : antialiased;

@@ -2,7 +2,7 @@ import * as types from '../mutation-types'
 import Cookie     from 'vue-cookie'
 // initial state
 const state = {
-	lang : Cookie.get('lang')?Cookie.get('lang') : 'zh'
+	lang : Cookie.get('lang')?Cookie.get('lang') : 'en'
 }
 
 const actions = {

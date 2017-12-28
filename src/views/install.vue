@@ -40,7 +40,8 @@
 </template>
 <script>
 	import Comfilm from '@/components/comfilm'
-
+	import {mapState} from 'vuex';
+	import moment from 'moment';
 	export default{
 		name : 'install',
 		data() {
@@ -81,10 +82,11 @@
 			},
 
 		},
-		computed : {
+		computed : mapState({
+			lang : state => state.Language.lang,
 			life() {
 				if(this.install.size == '' || this.install.water == ''){
-					return ''
+					return this.lang == "zh"?'滤芯寿命':'CARTRIDGE LIFESPAN'
 				}
 				if(this.install.size == '1' && this.install.water == '90' || this.install.size == '1' && this.install.water == '100' || this.install.size == '1' && this.install.water == '190' || this.install.size == '2' && this.install.water == '90'){
 					return '12'
@@ -99,9 +101,12 @@
 				}
 			},
 			changedate() {
-
+				const end_time = parseInt(this.life);
+				console.log('this.install.date', this.install.date)
+				if(end_time > 0 && this.install.date != '') return moment(this.install.date).add(end_time, 'M').format('YYYY-MM-DD');
+				else return this.lang == "zh"?'更换日期':'REPLACEMENT DATE';
 			}
-		}
+        })
 	}
 </script>
 <style>

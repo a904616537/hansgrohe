@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue       from 'vue'
 import App       from './App'
-import store     from './store'
+import Store     from './store'
 import router    from './router/index'
 import VueRouter from 'vue-router'
 // import Cookie from 'vue-cookie'
@@ -30,7 +30,7 @@ Vue.component('v-lang',Language)
 
 // var locale = Cookie.get('lang');
 
-Vue.use(vuexI18n.plugin, store)
+Vue.use(vuexI18n.plugin, Store)
 Vue.i18n.add('zh', require('@/languages/zh.json'))
 Vue.i18n.add('en', require('@/languages/en.json'))
 Vue.i18n.set('en');
@@ -39,6 +39,7 @@ Vue.i18n.set('en');
 new Vue({
   el: '#app',
   router,
+  store  : Store,
   template: '<App/>',
   components: { App }
 })

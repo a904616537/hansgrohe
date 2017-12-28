@@ -105,7 +105,7 @@
 	}
 </script>
 <style>
-	select[data-v-a078dc08] {
+	.regist .address select{
 		padding          : 0 6px;
 		margin-bottom    : 10px;
 		border-radius    : 10px;
@@ -114,7 +114,7 @@
 		background-color : rgb(239,239,244);
 		border           : none;
 	}
-	select[data-v-a078dc08]:first-child{
+	.regist .address select:first-child{
 		margin-right : 10px;
 	}
 </style>

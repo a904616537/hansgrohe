@@ -23,9 +23,11 @@
 				if(this.lang == 'English') {
 	        		this.lang = '中文';
 	        		this.$i18n.set('en');
+	        		this.SetLanguage('en')
 				}else {
 					this.$i18n.set('zh');
 					this.lang = 'English';
+					this.SetLanguage('zh')
 				}
 			},
 		}
