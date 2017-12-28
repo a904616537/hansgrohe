@@ -113,6 +113,10 @@
 		width              : 47.85%;
 		background-color   : rgb(239,239,244);
 		border             : none;
+		appearance         : none;
+		-moz-appearance    : none;
+		-webkit-appearance : none;
+		-ms-appearance     : none; 
 	}
 	.regist .address select:first-child{
 		margin-right : 10px;
