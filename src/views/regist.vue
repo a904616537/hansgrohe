@@ -106,13 +106,13 @@
 </script>
 <style>
 	.regist .address select{
-		padding          : 0 6px;
-		margin-bottom    : 10px;
-		border-radius    : 10px;
-		outline          : none;
-		width            : 47.85%;
-		background-color : rgb(239,239,244);
-		border           : none;
+		padding            : 0 6px;
+		margin-bottom      : 10px;
+		border-radius      : 10px;
+		outline            : none;
+		width              : 47.85%;
+		background-color   : rgb(239,239,244);
+		border             : none;
 	}
 	.regist .address select:first-child{
 		margin-right : 10px;
