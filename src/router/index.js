@@ -30,7 +30,8 @@ var routers = [
 
 
 const router = new Router({
-  	routes: routers,
+	routes : routers,
+	mode   :  'history'
 })
 
 router.beforeEach((to, from, next) => {
