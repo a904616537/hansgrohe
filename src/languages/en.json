@@ -1,0 +1,43 @@
+{
+	"home" : {
+		"title"    : "New Product Registration",
+		"regist"   : "Begin Registration",
+		"language" : "Switch Language："
+	},
+	"regist" : {
+		"number"     : "Serial Number",
+		"info"       : "Personal Info",
+		"tip"        : "If serial number is not automatically inserted, please refer to QR sticker label and manually enter serial number.",
+		"name"       : "FULL NAME *",
+		"city"       : "CITY *",
+		"address"    : "ADDRESS *",
+		"postcode"   : "POSTAL CODE *",
+		"mobile"     : "MOBILE PHONE *",
+		"code"       : "CODE",
+		"sms"        : "GET SMS",
+		"next"       : "Next Step",
+		"holdnumber" : "ABC123456 *"
+	},
+	"install" : {
+		"title"      : "Installation Info",
+		"date"       : "INSTALLATION DATE",
+		"status"     : "STATUS",
+		"size"       : "HOUSEHOLD SIZE",
+		"water"      : "WATER HARDNESS",
+		"life"       : "CARTRIDGE LIFESPAN",
+		"changedate" : "REPLACEMENT DATE",
+		"read"       : "I have read and agree to Hansgrohe's",
+		"guidelines" : "privacy policy guidelines",
+		"submit"     : "Submit Registration",
+		"back"       : "Previous Step"
+	},
+	"complete" : {
+		"title" : "Registration is Complete!",
+		"text"  : "Please insert message here about what customers can do going forward, when they'll be alerted about cartridge replacement, etc...",
+		"close" : "Close Window"
+	},
+	"registed" : {
+		"title" : "Product Previously Registered!",
+		"text"  : "The serial number was already registered with the mobile number you provided. If you need to order parts, click on “Existing Customers” on the main page."
+	}
+}

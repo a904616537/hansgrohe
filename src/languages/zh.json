@@ -1,0 +1,43 @@
+{
+	"home" : {
+		"title"    : "注册新产品",
+		"regist"   : "开始注册",
+		"language" : "切换语言："
+	},
+	"regist" : {
+		"number"     : "序列号",
+		"info"       : "个人信息",
+		"tip"        : "如果没有自动插入序列号，请参阅二维码标签并手动输入序列号",
+		"name"       : "姓名 *",
+		"city"       : "城市 *",
+		"address"    : "地址 *",
+		"postcode"   : "邮政编码 *",
+		"mobile"     : "手机号码 *",
+		"code"       : "验证码",
+		"sms"        : "获取短信",
+		"next"       : "下一步",
+		"holdnumber" : "ABC123456 *"
+	},
+	"install" : {
+		"title"      : "安装信息",
+		"date"       : "安装日期",
+		"status"     : "状态",
+		"size"       : "家庭规模",
+		"water"      : "水的硬度",
+		"life"       : "滤芯寿命",
+		"changedate" : "更换日期",
+		"read"       : "我已经阅读并同意汉斯格雅的",
+		"guidelines" : "隐私政策指南",
+		"submit"     : "提交注册表",
+		"back"       : "返回上一步"
+	},
+	"complete" : {
+		"title" : "注册成功！",
+		"text"  : "Please insert message here about what customers can do going forward, when they'll be alerted about cartridge replacement, etc...",
+		"close" : "关闭"
+	},
+	"registed" : {
+		"title" : "产品已经注册过！",
+		"text"  : "序列号已经用你提供的手机号注册了。如果您需要订购零件，请在主页上点击'现有客户'"
+	}
+}
