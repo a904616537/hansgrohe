@@ -14,7 +14,6 @@
             </select>
             <select v-model="install.water" class="pub-input select-input">
                 <option disabled value="">{{ $t('install.water') }} (ppm)</option>
-<<<<<<< HEAD
                 <option value="90">&lt 90</option>
                 <option value="100">100 - 180</option>
                 <option value="190">190 - 270</option>
@@ -22,15 +21,6 @@
                 <option value="350">350 - 450</option>
                 <option value="450">450 - 530</option>
                 <option value="530">&gt 530</option>
-=======
-                <option value="90">&lt 90 ppm / &lt 5 ºdH</option>
-                <option value="100">100 - 180 ppm / &gt 5-10 ºdH</option>
-                <option value="190">190 - 270 ppm / &gt 10 -15 ºdH</option>
-                <option value="280">280 - 350 ppm / &gt 15 -20 ºdH</option>
-                <option value="350">350 - 450 ppm / &gt 20- 25 ºdH</option>
-                <option value="450">450 - 530 ppm / &gt 25- 30 ºdH</option>
-                <option value="530">&gt 530 ppm / &gt 30 ºdH</option>
->>>>>>> fb75c16c7559db48890af18936b921281a668c7f
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
@@ -45,7 +35,6 @@
         </router-link>
         <v-lang></v-lang>
 
-<<<<<<< HEAD
         <v-comfilm ref="comfilm" v-show="isShowComfilm" :onClose="onClose"></v-comfilm>
     </div>
 </template>
@@ -55,15 +44,6 @@
     import Comfilm    from '@/components/comfilm'
     import {mapState} from 'vuex';
     import moment     from 'moment';
-=======
-        <v-comfilm v-show="isShowComfilm" :onClose="onClose"></v-comfilm>
-    </div>
-</template>
-<script>
-    import Comfilm from '@/components/comfilm'
-    import {mapState} from 'vuex';
-    import moment from 'moment';
->>>>>>> fb75c16c7559db48890af18936b921281a668c7f
     export default{
         name : 'install',
         data() {
@@ -95,7 +75,6 @@
                 if(this.install.date == '' || this.install.size == ''){
                     this.isShowComfilm = !this.isShowComfilm
                     return
-<<<<<<< HEAD
                 } else {
                     const model = {
                         person     : JSON.parse(localStorage.user),
@@ -114,10 +93,6 @@
                     .catch((error) => {
                         this.$router.push({path : '/registed'})
                     });
-=======
-                }else{
-                    this.$router.push({path : '/complete'})
->>>>>>> fb75c16c7559db48890af18936b921281a668c7f
                 }
             },
             onClose() {
@@ -145,10 +120,6 @@
             },
             changedate() {
                 const end_time = parseInt(this.life);
-<<<<<<< HEAD
-=======
-                console.log('this.install.date', this.install.date)
->>>>>>> fb75c16c7559db48890af18936b921281a668c7f
                 if(end_time > 0 && this.install.date != '') return moment(this.install.date).add(end_time, 'M').format('YYYY-MM-DD');
                 else return this.lang == "zh"?'更换日期':'REPLACEMENT DATE';
             }
