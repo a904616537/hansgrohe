@@ -14,6 +14,10 @@ const actions = {
 // mutations
 const mutations = {
 	[types.LANGUAGE_INIT] (state, data) {
+<<<<<<< HEAD
+=======
+		console.log('lang', data)
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 		state.lang = data;
 	}
 }

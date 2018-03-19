@@ -8,7 +8,10 @@
 <script>
     import Vue                   from 'vue';
     import Cookie                from 'vue-cookie';
+<<<<<<< HEAD
     import axios                 from 'axios';
+=======
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
     import {mapState,mapActions} from 'vuex';
 
     export default {
@@ -23,6 +26,7 @@
         }),
         methods: {
             ...mapActions([
+<<<<<<< HEAD
                 'SetLanguage',
                 'SetCode'
             ]),
@@ -52,6 +56,10 @@
         },
         created() {
             this.onWechatLogin();
+=======
+                'SetLanguage'
+            ]),
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
         }
     }
 </script>

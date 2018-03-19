@@ -2,7 +2,11 @@
 	<div class="regist">
 		<div class="regist-inner">
 			<p class="regist-title">{{ $t("regist.number") }}</p>
+<<<<<<< HEAD
 			<input type="text" :placeholder="$t('regist.holdnumber')" class="pub-input" v-model="number">
+=======
+			<input type="text" :placeholder="$t('regist.holdnumber')" class="pub-input" v-model="user.number">
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 			<p>{{ $t('regist.tip') }}</p>
 			<p class="regist-title">{{ $t('regist.info') }}</p>
 			<input type="text" :placeholder="$t('regist.name')" class="pub-input" v-model="user.name">
@@ -17,12 +21,17 @@
 			<input type="text" :placeholder="$t('regist.address')" class="pub-input" v-model="user.address">
 			<input type="text" :placeholder="$t('regist.postcode')" class="pub-input" v-model="user.postcode">
 			<input type="phone" :placeholder="$t('regist.mobile')" class="pub-input pub-sm-input" maxlength="13" v-model="phone">
+<<<<<<< HEAD
 			<input type="text" :placeholder="$t('regist.code')" class="pub-input pub-xs-input input-code" v-model="code">
+=======
+			<input type="text" :placeholder="$t('regist.code')" class="pub-input pub-xs-input input-code" v-model="user.code">
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 			<div class="sms pub-xs-input" @click="getCode" v-show="show">{{ $t('regist.sms') }}</div>
 			<div class="sms pub-xs-input sms-time" v-show="!show">{{ count}} s</div>
 		</div>	    
         <div class="pub-btn" @click="next">{{ $t('regist.next') }}</div>
 	    <v-lang></v-lang>
+<<<<<<< HEAD
 	    <v-comfilm ref="comfilm" v-show="isShow" :onClose="onClose"></v-comfilm>
 	</div>
 </template>
@@ -33,11 +42,20 @@
 	import VDistpicker from 'v-distpicker'
 	import {mapState, mapActions} from 'vuex'
 	
+=======
+	    <v-comfilm v-show="isShow" :onClose="onClose"></v-comfilm>
+	</div>
+</template>
+<script>
+	import Comfilm     from '@/components/comfilm'
+	import VDistpicker from 'v-distpicker'
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 
 	export default{
 		name : 'regist',
 		data() {
 			return {
+<<<<<<< HEAD
 				show    : true,
 				isShow  : false,
 				count   : '',
@@ -50,6 +68,19 @@
 					name     : '',
 					address  : '',
 					postcode : '',
+=======
+				show   : true,
+				isShow : false,
+				count  : '',
+				timer  : null,
+				phone  : '', 
+				user : {
+					name     : '',
+					address  : '',
+					postcode : '',
+					code     : '',
+					number   : '',
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 					province : '',
 					city     : '',
 				}
@@ -65,6 +96,7 @@
 			'v-comfilm'    : Comfilm,
 			'v-distpicker' : VDistpicker
 		},
+<<<<<<< HEAD
 		computed : mapState({
 			wechat_code : state => state.Code.code
 		}),
@@ -78,6 +110,10 @@
 				})
 				.catch((error) => {});
 
+=======
+		methods : {
+			getCode() {
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 				const time = 60;
 				if(!this.timer) {
 					this.count = time;
@@ -92,7 +128,10 @@
 						}
 					},1000)
 				}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 			},
 			onProvince(obj) {
                 this.user.province = obj.value;
@@ -101,6 +140,7 @@
                 this.user.city = obj.value;
             },
 			next() {
+<<<<<<< HEAD
 				if(this.number    		== '' ||
 					this.user.name     	== '' || 
 					this.user.address  	== '' ||
@@ -124,16 +164,33 @@
 						localStorage.number = this.number;
 						this.$router.push({path : '/install'})
 					}
+=======
+				if( this.user.number   == '' ||
+					this.user.name     == '' || 
+					this.user.address  == '' ||
+					this.user.province == '' ||
+				    this.user.city     == '' ||
+				    this.user.postcode == '' ||
+				    this.phone         == '' ||
+				    this.user.code     == '' ){
+					this.isShow = !this.isShow
+					return
+				}else{
+					this.$router.push({path : '/install'})
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 				}
 			},
 			onClose() {
 				this.isShow = false;
+<<<<<<< HEAD
 				this.$refs.comfilm.onReset();
 			}
 		},
 		created() {
 			if(this.wechat_code) {
 				this.number = this.wechat_code;
+=======
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 			}
 		}
 	}

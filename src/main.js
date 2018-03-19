@@ -18,6 +18,7 @@ import Calendar  from 'vue2-datepick'
 Vue.use(VueRouter)
 Vue.use(Calendar)
 
+Vue.config.productionTip = false
 Vue.component('v-logo',Logo)
 Vue.component('v-lang',Language)
 
@@ -34,6 +35,7 @@ Vue.i18n.add('zh', require('@/languages/zh.json'))
 Vue.i18n.add('en', require('@/languages/en.json'))
 Vue.i18n.set('en');
 
+<<<<<<< HEAD
 // Vue.config.network = 'http://localhost:8130';
 Vue.config.network = 'http://testserver.eatisco.com';
 
@@ -43,4 +45,13 @@ new Vue({
 	store      : Store,
 	template   : '<App/>',
 	components : { App }
+=======
+
+new Vue({
+  el: '#app',
+  router,
+  store  : Store,
+  template: '<App/>',
+  components: { App }
+>>>>>>> fb75c16c7559db48890af18936b921281a668c7f
 })
