@@ -35,13 +35,15 @@
         </router-link>
         <v-lang></v-lang>
 
-        <v-comfilm v-show="isShowComfilm" :onClose="onClose"></v-comfilm>
+        <v-comfilm ref="comfilm" v-show="isShowComfilm" :onClose="onClose"></v-comfilm>
     </div>
 </template>
 <script>
-    import Comfilm from '@/components/comfilm'
+    import Vue        from 'vue'
+    import axios      from 'axios'
+    import Comfilm    from '@/components/comfilm'
     import {mapState} from 'vuex';
-    import moment from 'moment';
+    import moment     from 'moment';
     export default{
         name : 'install',
         data() {
@@ -73,8 +75,24 @@
                 if(this.install.date == '' || this.install.size == ''){
                     this.isShowComfilm = !this.isShowComfilm
                     return
-                }else{
-                    this.$router.push({path : '/complete'})
+                } else {
+                    const model = {
+                        person     : JSON.parse(localStorage.user),
+                        phone      : localStorage.phone,
+                        number     : localStorage.number,
+                        setdate    : this.install.date,
+                        size       : this.install.size,
+                        water      : this.install.water,
+                        life       : this.life,
+                        changedate : this.install.changedate
+                    }
+                    axios.post(Vue.config.network + '/buyproduct', model)
+                    .then((response) => {
+                        this.$router.push({path : '/complete'})
+                    })
+                    .catch((error) => {
+                        this.$router.push({path : '/registed'})
+                    });
                 }
             },
             onClose() {
@@ -102,7 +120,6 @@
             },
             changedate() {
                 const end_time = parseInt(this.life);
-                console.log('this.install.date', this.install.date)
                 if(end_time > 0 && this.install.date != '') return moment(this.install.date).add(end_time, 'M').format('YYYY-MM-DD');
                 else return this.lang == "zh"?'更换日期':'REPLACEMENT DATE';
             }

@@ -10,15 +10,14 @@ import Vuex      from 'vuex'
 import vuexI18n  from 'vuex-i18n'
 import Cookie    from 'vue-cookie'
 import Logo      from '@/components/logo'
-import Language from '@/components/language'
-import Calendar from 'vue2-datepick'
+import Language  from '@/components/language'
+import Calendar  from 'vue2-datepick'
 
 
 // Vue.use(Cookie)
 Vue.use(VueRouter)
 Vue.use(Calendar)
 
-Vue.config.productionTip = false
 Vue.component('v-logo',Logo)
 Vue.component('v-lang',Language)
 
@@ -35,11 +34,13 @@ Vue.i18n.add('zh', require('@/languages/zh.json'))
 Vue.i18n.add('en', require('@/languages/en.json'))
 Vue.i18n.set('en');
 
+// Vue.config.network = 'http://localhost:8130';
+Vue.config.network = 'http://testserver.eatisco.com';
 
 new Vue({
-  el: '#app',
-  router,
-  store  : Store,
-  template: '<App/>',
-  components: { App }
+	router,
+	el         : '#app',
+	store      : Store,
+	template   : '<App/>',
+	components : { App }
 })

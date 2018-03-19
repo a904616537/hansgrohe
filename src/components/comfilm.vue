@@ -2,24 +2,37 @@
 	<div class="comfilm">
 		<div class="mask">
 			<div class="comfilm-inner">
-				<p>Please ensure all <br> mandatory fields are filled in</p>
+				<p>{{msg.title}}<br/>{{msg.desc}}</p>
 				<div class="sms pub-xs-input" @click="onClose">ok</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
+	const defTitle = 'Please ensure all',
+		  defDesc  = 'mandatory fields are filled in';
 	export default{
 		name: 'comfilm',
 		data() {
 			return {
-
+				msg : {
+					title : defTitle,
+					desc  : defDesc
+				}
 			}
 		},
 		props : {
 			onClose : {
 				type    : Function,
 				default : () => console.log('onClose')
+			}
+		},
+		methods : {
+			onReset() {
+				this.msg = {
+					title : defTitle,
+					desc  : defDesc
+				}
 			}
 		}
 	}

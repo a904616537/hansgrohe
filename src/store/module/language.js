@@ -14,7 +14,6 @@ const actions = {
 // mutations
 const mutations = {
 	[types.LANGUAGE_INIT] (state, data) {
-		console.log('lang', data)
 		state.lang = data;
 	}
 }
