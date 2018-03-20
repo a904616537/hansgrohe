@@ -121,7 +121,8 @@
             changedate() {
                 console.log('this.life', this.life);
                 const end_time = parseInt(this.life);
-                console.log('end_time', end_time);
+                // console.log('end_time', end_time);
+                alert(end_time)
                 if(end_time > 0 && this.install.date != '') return moment(this.install.date).add(end_time, 'months').format('YYYY-MM-DD');
                 else return this.lang == "zh"?'更换日期':'REPLACEMENT DATE';
             }
