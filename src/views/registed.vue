@@ -13,7 +13,7 @@
 		name : 'registed',
 		data() {
 			return {
-
+				
 			}
 		}
 	}

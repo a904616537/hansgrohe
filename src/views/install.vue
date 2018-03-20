@@ -14,13 +14,13 @@
             </select>
             <select v-model="install.water" class="pub-input select-input">
                 <option disabled value="">{{ $t('install.water') }} (ppm)</option>
-                <option value="90">&lt 90</option>
-                <option value="100">100 - 180</option>
-                <option value="190">190 - 270</option>
-                <option value="280">280 - 350</option>
-                <option value="350">350 - 450</option>
-                <option value="450">450 - 530</option>
-                <option value="530">&gt 530</option>
+                <option value="90">&lt 90 ppm / &lt 5 ºdH</option>
+                <option value="100">100 - 180 ppm / &gt 5-10 ºdH</option>
+                <option value="190">190 - 270 ppm / &gt 10 -15 ºdH</option>
+                <option value="280">280 - 350 ppm / &gt 15 -20 ºdH</option>
+                <option value="350">350 - 450 ppm / &gt 20- 25 ºdH</option>
+                <option value="450">450 - 530 ppm / &gt 25- 30 ºdH</option>
+                <option value="530">&gt 530 ppm / &gt 30 ºdH</option>
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
