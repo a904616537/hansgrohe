@@ -35,7 +35,7 @@
                 }
 
                 const code = getUrlParam('code');
-                const state = getUrlParam('state');
+                const state = getUrlParam('STATE');
                 console.log('state', state)
                 this.SetCode(state);
                 if(code) {

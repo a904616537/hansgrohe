@@ -20,7 +20,7 @@
                 <option value="280">280 - 350 ppm / &gt 15 -20 ºdH</option>
                 <option value="350">350 - 450 ppm / &gt 20- 25 ºdH</option>
                 <option value="450">450 - 530 ppm / &gt 25- 30 ºdH</option>
-                <option value="530">&gt 530 ppm / &gt 30 ºdH</option>
+                <option value="450">&gt 450ppm / &gt 25 ºdH</option>
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
