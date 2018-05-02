@@ -19,12 +19,11 @@
                 <option value="190">190 - 270 ppm / &gt 10 -15 ºdH</option>
                 <option value="280">280 - 350 ppm / &gt 15 -20 ºdH</option>
                 <option value="350">350 - 450 ppm / &gt 20- 25 ºdH</option>
-                <option value="450">450 - 530 ppm / &gt 25- 30 ºdH</option>
                 <option value="450">&gt 450ppm / &gt 25 ºdH</option>
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
-        </div>      
+        </div>
         <div class="checkbox">
             <input type="checkbox" name="" style="display: none"/>
             <span @click="agree"><label for="checkbox"></label><label class="check" v-show="isShow"></label></span><span style="display: inline-block; margin-left: 10px; font-size: 14px;">{{ $t('install.read') }} <span class="under-line">{{ $t('install.guidelines') }}</span></span>
