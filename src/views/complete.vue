@@ -5,7 +5,7 @@
 	    <div class="pub-img">
 	        <img src="/static/imgs/img.jpg" class="img" />
 	    </div>
-        <div class="pub-btn">{{ $t('complete.close') }}</div>
+        <div class="pub-btn" @click="onClose">{{ $t('complete.close') }}</div>
 	</div>
 </template>
 <script>
@@ -15,6 +15,12 @@
 			return {
 
 			}
+		},
+		methods : {
+			onClose() {
+				WeixinJSBridge.call('closeWindow');
+			}
 		}
+		
 	}
 </script>
