@@ -29,7 +29,8 @@
 		"read"       : "I have read and agree to Hansgrohe's",
 		"guidelines" : "privacy policy guidelines",
 		"submit"     : "Submit Registration",
-		"back"       : "Previous Step"
+		"back"       : "Previous Step",
+		"subdealer"  : "Sub-dealer code"
 	},
 	"complete" : {
 		"title" : "Registration is Complete!",

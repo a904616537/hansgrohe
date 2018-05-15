@@ -29,7 +29,8 @@
 		"read"       : "我已经阅读并同意汉斯格雅的",
 		"guidelines" : "隐私政策指南",
 		"submit"     : "提交注册表",
-		"back"       : "返回上一步"
+		"back"       : "返回上一步",
+		"subdealer"  : "分销商代码"
 	},
 	"complete" : {
 		"title" : "注册成功！",

@@ -23,6 +23,7 @@
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
+            <div class="pub-input pub-div">{{ $t('install.subdealer')}}</div>
         </div>
         <div class="checkbox">
             <input type="checkbox" name="" style="display: none"/>
