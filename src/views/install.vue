@@ -23,7 +23,7 @@
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
-            <div class="pub-input pub-div">{{ $t('install.subdealer')}}</div>
+            <input type="text" :placeholder="$t('install.subdealer')" class="pub-input" v-model="install.subdealer">
         </div>
         <div class="checkbox">
             <input type="checkbox" name="" style="display: none"/>
@@ -51,9 +51,10 @@
                 isShow        : true,
                 isShowComfilm : false,
                 install : {
-                    date  : null,
-                    size  : '',
-                    water : '',
+                    date      : null,
+                    size      : '',
+                    water     : '',
+                    subdealer : ''
                 }
             }
         },
@@ -83,6 +84,7 @@
                         setdate    : this.install.date,
                         size       : this.install.size,
                         water      : this.install.water,
+                        subdealer  : this.install.subdealer,
                         life       : this.life,
                         changedate : this.install.changedate
                     }
@@ -119,7 +121,9 @@
                 }
             },
             changedate() {
-                const end_time = parseInt(this.life);
+                const end_time = parseInt(this.life) - 1;
+                console.log('end_time', end_time)
+
                 if(end_time > 0 && this.install.date != '') return moment(this.install.date.split('-')).add(end_time, 'months').format('YYYY-MM-DD');
                 else return this.lang == "zh"?'更换日期':'REPLACEMENT DATE';
             }

@@ -34,7 +34,7 @@
 	},
 	"complete" : {
 		"title" : "注册成功！",
-		"text"  : "Please insert message here about what customers can do going forward, when they'll be alerted about cartridge replacement, etc...",
+		"text"  : "产品注册成功，在您的滤芯耗尽并需要更换时，我们将提供免费提醒服务。",
 		"close" : "关闭"
 	},
 	"registed" : {

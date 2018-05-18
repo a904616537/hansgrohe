@@ -34,7 +34,7 @@
 	},
 	"complete" : {
 		"title" : "Registration is Complete!",
-		"text"  : "Please insert message here about what customers can do going forward, when they'll be alerted about cartridge replacement, etc...",
+		"text"  : "Your product has been registered successfully. We offer you free reminding service and will call you once your cartridge needs to be replaced",
 		"close" : "Close Window"
 	},
 	"registed" : {
