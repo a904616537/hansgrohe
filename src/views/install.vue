@@ -86,7 +86,7 @@
                         water      : this.install.water,
                         subdealer  : this.install.subdealer,
                         life       : this.life,
-                        changedate : this.install.changedate
+                        changedate : this.changedate
                     }
                     axios.post(Vue.config.network + '/buyproduct', model)
                     .then((response) => {

@@ -8,10 +8,11 @@
 			<input type="text" :placeholder="$t('regist.name')" class="pub-input" v-model="user.name">
 			<template>
 				<v-distpicker  hide-area
-					:province = "user.province"
-					:city     = "user.city"
-					@province = "onProvince"
-					@city     = "onCity"
+				:province = "user.province"
+				:city     = "user.city"
+				:placeholders="placeholders"
+				@province = "onProvince"
+				@city     = "onCity"
 				></v-distpicker>
 			</template>
 			<input type="text" :placeholder="$t('regist.address')" class="pub-input" v-model="user.address">
@@ -66,7 +67,23 @@
 			'v-distpicker' : VDistpicker
 		},
 		computed : mapState({
-			wechat_code : state => state.Code.code
+			wechat_code : state => state.Code.code,
+			lang        : state => state.Language.lang,
+			placeholders() {
+				if(this.lang === 'zh') {
+					return {
+						province : '省',
+						city     : '市',
+						area     : '区',
+					}
+				} else {
+					return {
+						province : 'Province',
+						city     : 'City',
+						area     : 'Area',
+					}
+				}
+			}
 		}),
 		methods : {
 			getCode() {
