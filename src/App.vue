@@ -37,7 +37,7 @@
                 const code = getUrlParam('code');
                 let state = getUrlParam('STATE');
                 console.log('state', state)
-                if(code) {
+                if(code && code != '') {
                     state = getUrlParam('state');
                     this.SetCode(state);
                     axios.get(Vue.config.network + '/wechat/oauth/login?code=' + code)
@@ -48,8 +48,7 @@
                         console.log('error', error)
                     });
                 } else {
-                    alert('aaaa')
-                    // window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx06c82c3cbb012752&redirect_uri=http%3A%2F%2Ffiltration.hansgrohe.com.cn&response_type=code&scope=snsapi_base&state="+state+"#wechat_redirect";
+                    window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx06c82c3cbb012752&redirect_uri=http%3A%2F%2Ffiltration.hansgrohe.com.cn&response_type=code&scope=snsapi_base&state="+state+"#wechat_redirect";
                 }
                 
             }
