@@ -86,6 +86,23 @@ select::-ms-expand { display: none; }
 .router-link-active {
 	text-decoration : none;
 }
+.keep {
+	width            : 100%;
+	height           : 100vh;
+	top              : 0;
+	bottom           : 0;
+	z-index          : 999;
+	position         : absolute;
+	background-color : rgba(0,0,0,0.3);
+}
+.keep .block{
+	margin           : 20vh 5vh 0;
+	padding          : 0 0 5vh;
+	background-color : #fff;
+}
+.keep .close{
+	color: #ccc;
+}
 
 
 /*  regist  */
