@@ -2,7 +2,10 @@
 	"home" : {
 		"title"    : "注册新产品",
 		"regist"   : "开始注册",
-		"language" : "切换语言："
+		"language" : "切换语言：",
+		"shop"     : "进入商店",
+		"shop_text" : "请长按二维码关注公众号进入店铺",
+		"close"     : "关闭"
 	},
 	"regist" : {
 		"number"     : "序列号",

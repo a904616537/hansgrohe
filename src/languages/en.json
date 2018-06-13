@@ -1,8 +1,11 @@
 {
 	"home" : {
-		"title"    : "New Product Registration",
-		"regist"   : "Begin Registration",
-		"language" : "Switch Language："
+		"title"     : "New Product Registration",
+		"regist"    : "Begin Registration",
+		"language"  : "Switch Language：",
+		"shop"      : "Enter Shop",
+		"shop_text" : "Long-press QR code to enter the Hansgrohe Shop",
+		"close"     : "Close"
 	},
 	"regist" : {
 		"number"     : "Serial Number",
