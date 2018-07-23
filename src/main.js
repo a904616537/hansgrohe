@@ -32,10 +32,10 @@ Vue.component('v-lang',Language)
 Vue.use(vuexI18n.plugin, Store)
 Vue.i18n.add('zh', require('@/languages/zh.json'))
 Vue.i18n.add('en', require('@/languages/en.json'))
-Vue.i18n.set('en');
+Vue.i18n.set('zh');
 
 // Vue.config.network = 'http://localhost:8081';
-Vue.config.network = 'http://47.100.162.54:8081';
+Vue.config.network = 'http://filtration.hansgrohe.com.cn/server';
 
 new Vue({
 	router,
