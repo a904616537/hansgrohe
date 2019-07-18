@@ -1,23 +1,38 @@
 <template>
 	<div class="comfilm">
 		<div class="mask">
-			<div class="comfilm-inner">
-				<p>{{msg.title}}<br/>{{msg.desc}}</p>
-				<div class="sms pub-xs-input" @click="onClose">ok</div>
+			<div v-if="threeTimes">
+				<div class="comfilm-inner">
+					<p>{{msg.overTitle}}<br/>{{msg.overDesc}}<br/>{{msg.overText}}</p>
+					<div class="sms pub-xs-input" @click="onClose">ok</div>
+				</div>
+			</div>	
+			<div else>
+				<div class="comfilm-inner">
+					<p>{{msg.title}}<br/>{{msg.desc}}</p>
+					<div class="sms pub-xs-input" @click="onClose">ok</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
-	const defTitle = 'Please ensure all',
-		  defDesc  = 'mandatory fields are filled in';
+	const defTitle  = 'Please ensure all',
+		  defDesc   = 'mandatory fields are filled in',
+		  overTitle = 'The number has been used',
+		  overDesc  = 'more than three times. Please',
+		  overText  = 'change a new one.';
 	export default{
 		name: 'comfilm',
 		data() {
 			return {
+				threeTimes : false,
 				msg : {
-					title : defTitle,
-					desc  : defDesc
+					title     : defTitle,
+					desc      : defDesc,
+					overTitle : overTitle,
+					overDesc  : overDesc,
+					overText  : overText
 				}
 			}
 		},

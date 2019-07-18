@@ -23,6 +23,8 @@
 	},
 	"install" : {
 		"title"      : "Installation Info",
+		"city"       : "CITY OF PURCHASE",
+		"shop"       : "SHOP LOCATION",
 		"date"       : "INSTALLATION DATE",
 		"status"     : "STATUS",
 		"size"       : "HOUSEHOLD SIZE",

@@ -2,6 +2,21 @@
     <div class="install">
         <div class="regist-inner">
             <p class="regist-title">{{ $t('install.title') }}</p>
+            <div class="triangle-box">
+                <input readonly type="text" :placeholder="$t('install.city')" class="pub-input" @click="setCity" v-model="install.city">
+                <span class="triangle"></span>
+            </div>
+            <div class="triangle-box">
+                <select v-model="install.shop" class="pub-input select-input">
+                    <option disabled value="">{{ $t('install.shop')}}</option>
+                    <option value="1">位置1</option>
+                    <option value="2">位置2</option>
+                    <option value="3">位置3</option>
+                    <option value="4">位置4</option>
+                    <option value="5">位置5</option>
+                </select>
+                <span class="triangle"></span>
+            </div>
             <input readonly type="text" :placeholder="$t('install.date')" class="pub-input" @click="setDate" v-model="install.date">
             <select v-model="install.size" class="pub-input select-input">
                 <option disabled value="">{{ $t('install.size')}}</option>
@@ -23,7 +38,7 @@
             </select> 
             <div class="pub-input pub-div">{{ life }}</div>
             <div class="pub-input pub-div">{{ changedate }}</div>
-            <input type="text" :placeholder="$t('install.subdealer')" class="pub-input" v-model="install.subdealer">
+            <!-- <input type="text" :placeholder="$t('install.subdealer')" class="pub-input" v-model="install.subdealer"> -->
         </div>
         <div class="checkbox">
             <input type="checkbox" name="" style="display: none"/>
@@ -54,7 +69,9 @@
                     date      : null,
                     size      : '',
                     water     : '',
-                    subdealer : ''
+                    subdealer : '',
+                    city      : '',
+                    shop      : '' 
                 }
             }
         },
@@ -64,6 +81,10 @@
         methods : {
             agree() {
                 this.isShow = !this.isShow
+            },
+            //获取购买的城市
+            setCity() {
+
             },
             setDate() {
                 this.$calendar.show({
@@ -81,6 +102,8 @@
                         person     : JSON.parse(localStorage.user),
                         phone      : localStorage.phone,
                         number     : localStorage.number,
+                        city       : this.install.city,
+                        shop       : this.install.shop,
                         setdate    : this.install.date,
                         size       : this.install.size,
                         water      : this.install.water,
@@ -174,5 +197,19 @@
         -webkit-appearance : none;
         -ms-appearance     : none; 
         color              : #2c3e50;
+    }
+    .triangle-box{
+        position : relative;
+    }
+    .triangle{
+        z-index      : 9;
+        position     : absolute;
+        right        : 10px;
+        top          : 14px;
+        width        : 0;
+        height       : 0;
+        border-left  : 10px solid transparent;
+        border-right : 10px solid transparent;
+        border-top   : 12px solid rgb(38,167,146);
     }
 </style>
